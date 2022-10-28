@@ -11,15 +11,17 @@ import NavDropdown from 'react-bootstrap/NavDropdown';
 
 function BasicExample() {
   return (
-    <Navbar bg="light" expand="lg">
+    <Navbar bg= "#73e58c" variant="light" expand="lg">
       <Container>
-        <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+        <Navbar.Brand href="#home">
+        <img className="logo" src={process.env.PUBLIC_URL + "/logo.png"}/>
+        </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <Nav.Link href="#home">Home</Nav.Link>
-            <Nav.Link href="#link">Link</Nav.Link>
-            
+            <Nav.Link href="/">Home</Nav.Link>
+            <Nav.Link href="/colors">Colors</Nav.Link>
+            <Nav.Link href="/layouts">Layouts</Nav.Link>
           </Nav>
         </Navbar.Collapse>
       </Container>
@@ -31,20 +33,6 @@ function BasicExample() {
 const NavBarLayout = () => {
   return (
     <>
-      <nav>
-        <ul>
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/colors">Colors</Link>
-          </li>
-          <li>
-            <Link to="/layouts">Layouts</Link>
-          </li>
-        </ul>
-      </nav>
-
       <BasicExample />
 
       <Outlet />
