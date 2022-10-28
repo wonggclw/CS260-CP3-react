@@ -1,4 +1,4 @@
-import { Outlet, Link } from "react-router-dom";
+import { Outlet, Link} from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
 import 'bootstrap'
@@ -7,7 +7,6 @@ import Popper from 'popper.js';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
 
 function BasicExample() {
   return (
@@ -29,10 +28,18 @@ function BasicExample() {
   );
 }
 
+function Header({title}){
+  return(
+    <div className="container page-head">
+      <h1 className="page-header">{title}</h1>
+    </div>
+   ) 
+}
 
 const NavBarLayout = () => {
   return (
     <>
+      <Header title="STYLESHEETS"/>
       <BasicExample />
 
       <Outlet />

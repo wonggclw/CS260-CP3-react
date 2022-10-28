@@ -58,11 +58,11 @@ hr {
     max-width: 75vw;
 }
 
-/* .main-head{
+ .main-head{
     background-color: gray;
     background-position: center;
     background-size: cover;
-    background-image: url('images/BannerBackground.png');
+    background-image: url('../public/BannerBackground\ \(1\).png');
     padding-top: 8vw;
     padding-left: 5vw !important;
     color: white;
@@ -81,7 +81,7 @@ hr {
     background-color: gray;
     background-position: center;
     background-size: cover;
-    background-image: url('images/BannerBackground.png');
+    background-image: url('../public/BannerBackground\ \(1\).png');
     padding-top: 8vw;
     color: white;
     height: 50vh;
@@ -89,7 +89,7 @@ hr {
     margin: 0;
     align-items: center;
     padding-left: 5vw !important;
-} */
+}
 
 .page-header{
     font-family: 'Rubik Dirt', cursive;

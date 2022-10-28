@@ -13,9 +13,9 @@ export default function App() {
       <Routes>
         <Route path="/" element={<NavBarLayout />}>
           <Route index element={<Home />} />
-          <Route path="colors" element={<Colors />} />
+          <Route path="colors" element={<Colors />}/>
           <Route path="layouts" element={<Layouts />} />
-          <Route path="*" element={<NoPage />} />
+          <Route path="*" element={<NoPage />}/>
         </Route>
       </Routes>
     </BrowserRouter>
