@@ -1,25 +1,23 @@
-import logo from './logo.svg';
-import './App.css';
+import ReactDOM from "react-dom/client";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Colors from "./pages/Colors";
+import Home from "./pages/Home";
+//note - Layouts is the page with the layout stuff on it. NavbarLayout is the layout file for the pages.
+import Layouts from "./pages/Layouts";
+import NavBarLayout from "./pages/Nav-Bar-Layout";
+import NoPage from "./pages/NoPage";
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<NavBarLayout />}>
+          <Route index element={<Home />} />
+          <Route path="colors" element={<Colors />} />
+          <Route path="layouts" element={<Layouts />} />
+          <Route path="*" element={<NoPage />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
-
-export default App;
