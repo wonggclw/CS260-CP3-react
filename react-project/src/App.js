@@ -9,13 +9,16 @@ import NoPage from "./pages/NoPage";
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <BrowserRouter 
+    basename="CP3Builded"
+    //<Route path="*" element={<NoPage />}/>
+    >
       <Routes>
         <Route path="/" element={<NavBarLayout />}>
           <Route index element={<Home />} />
           <Route path="colors" element={<Colors />}/>
           <Route path="layouts" element={<Layouts />} />
-          <Route path="*" element={<NoPage />}/>
+          
         </Route>
       </Routes>
     </BrowserRouter>
