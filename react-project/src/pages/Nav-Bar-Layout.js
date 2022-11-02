@@ -13,7 +13,7 @@ function BasicExample() {
   return (
     <Navbar bg= "#73e58c" variant="light" expand="lg">
       <Container>
-        <Navbar.Brand href="#home">
+        <Navbar.Brand to="/">
         <img className="logo" src={process.env.PUBLIC_URL + "/logo.png"}/>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
